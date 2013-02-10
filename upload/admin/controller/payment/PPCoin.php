@@ -82,7 +82,7 @@ class ControllerPaymentPPCoin extends Controller {
         $this->data['entry_port']       = $this->language->get('entry_port');
         $this->data['entry_prefix']       = $this->language->get('entry_prefix');
         $this->data['entry_order_status'] = $this->language->get('entry_order_status');
-        $this->data['entry_show_ppc']         = $this->language->get('entry_show_ppc');
+        $this->data['entry_show_PPC']         = $this->language->get('entry_show_PPC');
         $this->data['entry_status']         = $this->language->get('entry_status');
 		$this->data['entry_sort_order'] 	= $this->language->get('entry_sort_order');
 		
@@ -170,10 +170,10 @@ class ControllerPaymentPPCoin extends Controller {
 		} else {
 			$this->data[$this->payment_module_name.'_prefix'] = $this->config->get($this->payment_module_name.'_prefix');
 		} 
-        if (isset($this->request->post[$this->payment_module_name.'_show_ppc'])) {
-			$this->data[$this->payment_module_name.'_show_ppc'] = $this->request->post[$this->payment_module_name.'_show_ppc'];
+        if (isset($this->request->post[$this->payment_module_name.'_show_PPC'])) {
+			$this->data[$this->payment_module_name.'_show_PPC'] = $this->request->post[$this->payment_module_name.'_show_PPC'];
 		} else {
-			$this->data[$this->payment_module_name.'_show_ppc'] = $this->config->get($this->payment_module_name.'_show_ppc');
+			$this->data[$this->payment_module_name.'_show_PPC'] = $this->config->get($this->payment_module_name.'_show_PPC');
 		}
 		if (isset($this->request->post[$this->payment_module_name.'_order_status_id'])) {
 			$this->data[$this->payment_module_name.'_order_status_id'] = $this->request->post[$this->payment_module_name.'_order_status_id'];
